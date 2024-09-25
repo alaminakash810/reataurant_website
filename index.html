@@ -53,7 +53,7 @@
             <br><br>
             <h1 class="site-heading site-animate mb-3" style="color: #fff; text-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080;">Welcome To Spice & Soul</h1><br><br>
             <h2 class="h5 site-subheading mb-5 site-animate" style="color: #fff; text-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080; font-size:150%">Come and dine with our delicious &amp; healthy foods.</h2>  <br>  
-            <p><a href="https://colorlib.com/" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
+            <p style="color: #fff; text-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080;"><a href="https://colorlib.com/" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
           </div>
         </div>
       </div>
@@ -66,10 +66,18 @@
           <div class="col-md-5 site-animate mb-5">
             <h4 class="site-sub-title">Our Story</h4>
             <h2 class="site-primary-title display-4">Welcome</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p><a href="#" class="btn btn-secondary btn-lg">Learn More About Us</a></p>
+            <p>"At Spice and Soul, every bite is an adventure, and every meal is a journey that warms the heart and feeds the soul."</p>
+    
+            <p class="mb-4">Introducing Spice and Soul, a vibrant new restaurant that brings together the warmth of home-cooked meals with the excitement of global flavors. At Spice and Soul, we take pride in crafting delicious dishes that stir the senses and nourish the soul. Whether you're starting your day with a hearty breakfast, enjoying a flavorful lunch, or indulging in a comforting dinner, every meal is made with care and creativity.</p>
+    
+            <!-- New hidden paragraph -->
+            <p id="more-details" style="display: none;">
+              Serving three meals a day, Spice and Soul offers a diverse menu filled with fresh ingredients, bold spices, and a fusion of culinary traditions. It's a place where food lovers can find both classic favorites and new, exciting tastes that reflect a love for quality and innovation. Whether you’re in for a quick bite or a full dining experience, our friendly atmosphere will make you feel right at home. Come discover the essence of flavor and hospitality at Spice and Soul!
+            </p>
+              Click the Button for more information
+            <p>
+              <a href="#" id="learn-more-btn" class="btn btn-secondary btn-lg">Learn More About Us</a>
+            </p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
@@ -78,7 +86,24 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
+    
+    <!-- JavaScript code -->
+    <script>
+      document.getElementById('learn-more-btn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+    
+        // Toggle visibility of the extra paragraph
+        var moreDetails = document.getElementById('more-details');
+        if (moreDetails.style.display === 'none') {
+          moreDetails.style.display = 'block';  // Show the paragraph
+          this.textContent = 'Show Less';       // Change button text
+        } else {
+          moreDetails.style.display = 'none';   // Hide the paragraph
+          this.textContent = 'Learn More About Us'; // Revert button text
+        }
+      });
+    </script>
+    
     
 
     <section class="site-section bg-light" id="section-offer">
